@@ -1,0 +1,41 @@
+
+<%- include('layout/header') %>
+<div class="container">
+    <div class="row">
+        <div class="col lg-6 mx-auto mt-4">
+          <div class="card-shadow">
+            <div class="card-header bg-dark">
+               <h3 class="text-light">Add New Employee</h3>
+            </div>
+            <div class="card-body p-4">
+                <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+                   <div class="mb-3">
+                      <label for="employeeName"> Employee Name</label>
+                      <input type="text" name="employeeName" id="employeeName" class="form-control form-control-lg" placeholder="Enter name" required/>
+                   </div>
+                   <div class="mb-3">
+                    <label for="employeeDesignation"> Designation</label>
+                    <input type="text" name="employeeDesignation" id="employeeDesignation" class="form-control form-control-lg" placeholder="Enter designation" required/>
+                   </div>
+                   <div class="mb-3">
+                    <label for="employeeLocation"> Location</label>
+                    <input type="text" name="employeeLocation" id="employeeLocation" class="form-control form-control-lg" placeholder="Enter location" required/>
+                   </div>
+                   <div class="mb-3">
+                    <label for="salary"> Salary</label>
+                    <input type="text" name="salary" id="salary" class="form-control form-control-lg" placeholder="Enter salary" required/>
+                   </div>
+                   <div class="mb-3">
+                    <label for="image" class="form-label"> Select Passport Photo</label>
+                    <input type="file" name="image" id="image" class="form-control form-control-lg" required/>
+                   </div>
+                   <div class="mb-3 d-grid">
+                    <input type="submit" value="Add Employee" name="submit" id="submit" class="btn btn-dark btn-lg">
+                   </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+   <%- include('layout/footer') %>
