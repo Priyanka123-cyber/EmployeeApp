@@ -46,7 +46,8 @@ router.post('/add', upload.single('image'), (req, res) => {
         image: req.file.filename
     });
 
-    user.save().then(() => {
+    user.save()
+    .then(() => {
         req.session.message = {
             type: 'success',
             message: 'Employee added successfully!'
